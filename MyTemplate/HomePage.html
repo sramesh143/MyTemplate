@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\devil\Desktop\MyTemplate\CSS\HomePageStyle.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="C:\Users\devil\Desktop\MyTemplate\JS\jQuery3.5.1.js"></script>
+    <script type="text/javascript" src="C:\Users\devil\Desktop\MyTemplate\JS\slick.min.js"></script>
+    <link href="C:\Users\devil\Desktop\MyTemplate\CSS\slick.min.css" rel="stylesheet" />
+    <link href="C:\Users\devil\Desktop\MyTemplate\CSS\slick-theme.min.css" rel="stylesheet" />
+
+    <title>MyTemplate</title>
+   
+    <script type="text/javascript">
+        //function myFunction() {
+        //    var x = document.getElementById("myLinks");
+        //    //if (x.style.display === "block") {
+        //    //    x.style.display = "none";
+        //    //    document.getElementById("myLinks").style.width = "0";
+
+        //    //} else {
+        //    //    x.style.display = "block";
+        //    //    document.getElementById("myLinks").style.width = "200px";
+
+        //    //}
+            
+        //}
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "200px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        
+        //$(document).ready(function () {
+        //    $('.carousel').slick({
+        //        slidesToShow: 3,
+        //        dots: true,
+        //        centerMode: true,
+        //        responsive: [
+        //            {
+        //                breakpoint: 980,
+        //                settings: {
+        //                    slidesToShow: 2,
+        //                    dots: true,
+        //                    centerMode: true,
+        //                }
+        //            }
+        //            ]
+        //    });
+        //});
+
+        
+        $(document).ready(function () {
+            $('.slides').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                nextArrow: $('.next'),
+                prevArrow: $('.prev'),
+                responsive: [
+                    {
+                        breakpoint: 980,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '0px',
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 780,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '0px',
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 680,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '0px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+        });
+
+    </script>
+    <style>
+        /*.closetab {
+            display: none;
+        }*/
+        @media all and (max-width:1010px){
+            .sidenav {
+                /*height: 100%;*/
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                background-color: rgb(0, 0, 0);
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+                padding-bottom:10px;
+            }
+
+                .sidenav a {
+                    /* padding: 8px 8px 8px 30px;*/
+                    text-decoration: none;
+                    font-size: 20px;
+                    color: white;
+                    display: block;
+                }
+
+            .main-bar {
+                padding: 5px 20px 5px 15px;
+                margin:0px 0;
+            }
+
+            .sidenav a:hover {
+                color: black;
+                background-color: rgba(255, 255, 255, 0.77);
+                padding:0px 15px;
+            }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 5px;
+                right: 25px;
+                font-size: 30px;
+                margin-left: 50px;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- main-navigation-bar-start -->
+    <header class="main-content">
+        <div class="nav-bar-template">
+
+            <span class="home"><a href="#Company"><b class="cmptitle">Company</b></a></span>
+
+            <span id="mySidenav" class="sidenav">
+                <span class="closetab"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></span>
+                <a href="#Aboutus" class="main-bar">AboutUs</a>
+                <a href="#news" class="main-bar">News</a>
+                <a href="#blog" class="main-bar">Blog</a>
+                <a href="#porfolio" class="main-bar">Porfolio</a>
+                <a href="#faq" class="main-bar">Faq</a>
+                <a href="#contact" class="main-bar">Contact</a>
+            </span>
+
+
+        </div>
+        <span class="hamburger"><a href="javascript:void(0);" class="icon" onclick="openNav()"><i class="fa fa-bars"></i></a></span>
+
+        <div class="company-slogan">
+            <h1>Company slogan</h1>
+            <p>
+                The real test is not whether you avoid this failure because you won’t. <br />It’s whether you let it harden or shame you into in action or whether you learn from it <br />whether you choose to persevere.
+            </p>
+        </div>
+    </header>
+    <!-- main-navigation-bar-end -->
+    <div class="title-download">
+        <span>download your own digital porfolio in 60 seconds.</span>
+        <button id="btnddownlaod" value="download">download</button>
+    </div>
+    <!--pagination-images-star -->
+    <!--<div class="pagination">
+        <div class="pagination-img">
+            <a href="#imglt"><img src="C:\Users\devilDesktop\MyTemplate\img\lessthen.png" class="ltimg" /></a>
+            <img src="C:\Users\devil\Desktop\MyTemplate\img\block1-hover.jpg" class="pagination-wdt-ht" />
+            <img src="C:\Users\devil\Desktop\MyTemplate\img\block2-hover.jpg" class="pagination-wdt-ht" />
+            <img src="C:\Users\devil\Desktop\MyTemplate\img\block3-hover.jpg" class="pagination-wdt-ht" />
+            <img src="C:\Users\devil\Desktop\MyTemplate\img\block4-hover.jpg" class="pagination-wdt-ht" />
+            <a href="#imggt"><img src="C:\Users\devil\Desktop\MyTemplate\img\gt.png" class="gtimg" /></a>
+        </div>
+    </div>-->
+    <!--<div class="wrapper">
+        <div class="carousel">
+            <div><img src="C:\Users\devil\Desktop\MyTemplate\img\block1-hover.jpg" class="pagination-wdt-ht" /></div>
+            <div><img src="C:\Users\devil\Desktop\MyTemplate\img\block2-hover.jpg" class="pagination-wdt-ht" /></div>
+            <div><img src="C:\Users\devil\Desktop\MyTemplate\img\block3-hover.jpg" class="pagination-wdt-ht" /></div>
+            <div><img src="C:\Users\devil\Desktop\MyTemplate\img\block4-hover.jpg" class="pagination-wdt-ht" /></div>
+        </div>
+    </div>-->
+    <!--pagination-images-end -->
+    <div class="slide-slick">
+        <div class="slide-block-a"><i class="fa fa-chevron-left prev"></i></div>
+        <div class="slide-page">
+
+            <div class="slides">
+                <div class="slide-img"><img src="C:\Users\devil\Desktop\MyTemplate\img\block1-hover.jpg" /></div>
+                <div class="slide-img"><img src="C:\Users\devil\Desktop\MyTemplate\img\block2-hover.jpg" /></div>
+                <div class="slide-img"><img src="C:\Users\devil\Desktop\MyTemplate\img\block3-hover.jpg" /></div>
+                <div class="slide-img"><img src="C:\Users\devil\Desktop\MyTemplate\img\block4-hover.jpg" /></div>
+            </div>
+        </div>
+        <div class="slide-block-b"><i class="fa fa-chevron-right next"></i></div>
+    </div>
+    <!--photos gallery-start-->
+    <div class="third-section">
+        <div class="third-section-a">
+            <div class="section-titlle-bar">
+                <h3>Best Photo Gallery Website Templates</h3>
+            </div>
+            <div class="section-imge-bar">
+                <div class="section-imge-bar-a">
+                    <img src="C:\Users\devil\Desktop\MyTemplate\img\antique-electric-lab.jpg" />
+                </div>
+                <div class="section-img-bar-b">
+                    <p>
+                        It opened as a museum in 1990.Ten years later, the Electricity Museum's buildings and equipment underwent a period of rehabilitation,
+                        to reopen in 2006 fully renovated and with a new discourse and museum proposals.
+                        The entire complex that makes up the Tejo Power Station constitutes an old thermoelectric plant that supplied power to Lisbon and its surrounding area.
+                        Tejo Power Station was built between 1908 and 1951, thereby undergoing several stages of expansion throughout this period.
+
+
+                    </p>
+                    <a href="#download" class="img-dowload">download</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="third-section-b">
+            <div class="forth-section">
+                <h3>New in portfolio</h3>
+            </div>
+            <div class="forth-section-block">
+                <div class="forth-section-block-a">
+                    <div class="block-a">
+                        <img src="C:\Users\devil\Desktop\MyTemplate\img\christmas-snowman.jpg" />
+                    </div>
+                    <div class="block-b">
+                        <img src="C:\Users\devil\Desktop\MyTemplate\img\colorful-flowers-garden.jpg" />
+                    </div>
+                </div>
+
+                <div class="forth-section-block-a">
+                    <div class="block-a">
+                        <img src="C:\Users\devil\Desktop\MyTemplate\img\colorful-lion-face.jpg" />
+                    </div>
+                    <div class="block-b">
+                        <img src="C:\Users\devil\Desktop\MyTemplate\img\orange-sunset.jpg" />
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <!--photos gallery-end-->
+    <!--footer-block-start-->
+    <footer style="margin-bottom:0px">
+        <div class="fifth-section">
+            <div class="column">
+                <ul class="footer-list">
+                    <li><h3>About us </h3></li>
+                    <li> <a href="#history">history</a></li>
+                    <li><a href="#infoone">info one</a></li>
+                    <li><a href="#infotwo">info two</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul class="footer-list">
+                    <li> <h3>News</h3></li>
+                    <li><a href="#session">session</a></li>
+                    <li> <a href="#statistic">statistic</a></li>
+                    <li> <a href="#creativetech">creative tech</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul class="footer-list">
+                    <li><h3>Blog</h3></li>
+                    <li><a href="#articleone">article one</a></li>
+                    <li><a href="#articletwo">article two</a></li>
+                    <li><a href="#articlethree">article three</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul class="footer-list">
+                    <li><h3>Portfolio</h3></li>
+                    <li><a href="#gallery">gallery</a></li>
+                    <li> <a href="#adertisement">adertisement</a></li>
+                    <li> <a href="#webdesign">web design</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul class="footer-list">
+                    <li><h3>FAQ</h3></li>
+                    <li> <a href="#questionone">question one</a></li>
+                    <li> <a href="#questiontwo">question two</a></li>
+                    <li> <a href="#questionthree">question three</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="search-content">
+            <div class="Copyright">Copyright &#169 2020 site company </div>
+            <div class="search-box"><input type="text" id="tbsearch" placeholder="search" /><button type="submit" id="#btnsubmit"><i class="fa fa-search"></i></button></div>
+        </div>
+
+    </footer>
+    <!--footer-block-end-->
+
+</body>
+
+
+</html>
